@@ -3,7 +3,7 @@ import random
 kahoot = [
     {
         "question": "Welche Faustregel gilt für Schrift?",
-        "options": ["Serifenschriften für Print, Sans-Serif für Bildschirm", "Serifenschriften für Bildschirm, Sans-Serif für Print", "Serifenschriften für Print, Sans-Serif für Bildschirm", "Serifenschriften für Bildschirm, Sans-Serif für Bildschirm"],
+        "options": ["Serifenschriften für Print, Sans-Serif für Bildschirm", "Serifenschriften für Bildschirm, Sans-Serif für Print"],
         "correct_answer": "Serifenschriften für Print, Sans-Serif für Bildschirm"
     },
     {
@@ -113,9 +113,9 @@ kahoot = [
         "correct_answer": "einmal"
     },
     {
-        "question": "Wie viele Bits können bei 192.168.2.2/TS theoretisch zur Bildung von Subnetzen verwendet werden?",
+        "question": "Wie viele Bits können bei 192.168.2.2/13 theoretisch zur Bildung von Subnetzen verwendet werden?",
         "options": ["16", "8", "17", "19"],
-        "correct_answer": "16"
+        "correct_answer": "19"
     }
 ]
 
