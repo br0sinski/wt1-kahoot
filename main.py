@@ -119,26 +119,36 @@ kahoot = [
     }
 ]
 
+GREEN = '\033[92m'
+RED = '\033[91m'
+BLUE = '\033[94m'
+BOLD = '\033[1m'
+RESET = '\033[0m'
+
+
 
 def abfragen(quiz_data):
+    print(f"{BLUE}{BOLD}Insgesamt {len(quiz_data)} Fragen{RESET}")
     score = 0
     random.shuffle(quiz_data)  
     for i, question_data in enumerate(quiz_data):
-        print(f"\nFrage {i + 1}: {question_data['question']}")
+        print(f"\n{BLUE}{BOLD}Frage {i + 1}: {RESET}{question_data['question']}")
         if "code" in question_data:
-            print(f"Code:\n{question_data['code']}")
+            print(f"{BOLD}Code:{RESET}\n{question_data['code']}")
         for j, option in enumerate(question_data['options']):
-            print(f"{j + 1}. {option}")
+            print(f"{BOLD}{j + 1}.{RESET} {option}")
         
-        user_answer = input("Deine Antwort (Nummer): ")
-        if question_data['options'][int(user_answer) - 1] == question_data['correct_answer']:
-            print("Richtig! Yippiii!!")
-            score += 1
-        else:
-            print(f"Falsch! =( - Die richtige Antwort ist: {question_data['correct_answer']}")
+        user_answer = input(f"{BOLD}Deine Antwort (Nummer): {RESET}")
+        try:
+            if question_data['options'][int(user_answer) - 1] == question_data['correct_answer']:
+                print(f"{GREEN}Richtig! Yippiii!!{RESET}")
+                score += 1
+            else:
+                print(f"{RED}Falsch! =( - Die richtige Antwort ist: {question_data['correct_answer']}{RESET}")
+        except (ValueError, IndexError):
+            print(f"{RED}Ungültige Eingabe! Die richtige Antwort wäre: {question_data['correct_answer']}{RESET}")
     
-    print(f"\nQuiz beendet! Deine Punktzahl: {score}/{len(quiz_data)}")
-
+    print(f"\n{BLUE}{BOLD}Quiz beendet! Deine Punktzahl: {score}/{len(quiz_data)}{RESET}")
 
 if __name__ == "__main__":
     abfragen(kahoot)
