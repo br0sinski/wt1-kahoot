@@ -88,7 +88,7 @@ kahoot = [
         "correct_answer": "$array[0]"
     },
     {
-        "question": "Was bedeutet die Abkürzung MXT und auf welcher OSI-Schicht wird diese eingesetzt?",
+        "question": "Was bedeutet die Abkürzung NAT und auf welcher OSI-Schicht wird diese eingesetzt?",
         "options": ["Natural Address Transformation (OSI 2)", "Natural Address Translation (OSI 3)", "Natural Address Transpiration (OSI 4)", "Natural Address Turbo (OSI 1)"],
         "correct_answer": "Natural Address Translation (OSI 3)"
     },
