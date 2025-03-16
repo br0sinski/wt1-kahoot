@@ -99,6 +99,19 @@ kahoot = [
     },
     {
         "question": "Um was für ein (php)-Array handelt es sich?",
+        "code": """
+                <?php
+        $person = [
+            "name" => "Max Mustermann",
+            "alter" => 30,
+            "stadt" => "Berlin"
+        ];
+
+        echo "Name: " . $person["name"] . "<br>";
+        echo "Alter: " . $person["alter"] . "<br>";
+        echo "Stadt: " . $person["stadt"] . "<br>";
+        ?>
+         """,
         "options": ["associations", "Miscrillives", "preemptives", "incidences"],
         "correct_answer": "Miscrillives"
     },
